@@ -1,0 +1,75 @@
+/*H6WD ca2 smart Home sustainability-stye.css*/
+
+body{font-family:Arial,sans-serif;margin: 0; padding: 0;background-color: #fofofo; color: #333333;}
+h1,h2,h3{color: #0F3D3E; }
+a{ color: #1B6B65; }
+p{ line-height:1.6;} 
+a:hover { text-decoration: underline; }
+img{ max-width: 100%;height:auto; }
+/*Header and Nav*/
+header{background-color: #0F3D3E;padding:15px;display: flex;justify-content: space-between;align-items:center;flex-wrap: wrap;}
+header>a {color: #ffffff;font-weight: bold;font-size: 1.2rem;}
+nav ul{list-style: none;display: flex;flex-wrap: wrap;margin: 0;padding: 0;}
+nav li{margin-left: 15px;}
+nav a{color: #ffffff;font-weight: bold;}
+nav a.active{color: #F2A93B;}
+
+/*Hero*/
+#hero{background-color: #1B6B65;color: #ffffff;padding: 30px 20px;}
+#hero h1{color: #ffffff;}
+#hero-energy{background-color: #0F3D3E;color: #ffffff;padding: 20px;}
+#hero-energy h1{color:#ffffff;}
+#hero-calc{background-color: #0F3D3E;color: #ffffff;padding: 20px;}
+#hero-calc h1{color: #ffffff;}
+
+/*Buttons*/
+.btn{display: inline-block;background-color: #F2A93B;color: #0F3D3E;font-weight: bold;padding: 10px 20px;border:none;margin-top: 10px;text-decoration: none;}
+.btn:hover{background-color: #d9921f;}
+
+/*Sections*/
+section{padding: 25px 20px;max-width: 1100px;margin: 0 auto;}
+
+/*Layout*/
+.section{padding:25px 20px;}
+.container{max-width: 100px;margin: 0 auto;padding:0 20px;}
+.center-text{text-align:center;}
+.space-bottom{margin-bottom:15px;}
+.section-intro{margin-bottom: 20px;}
+
+/*Cards flexbox*/
+.card-row{display: flex;flex-wrap: wrap;}
+.card{background-color: #ffffff;border: 1px solid #cccccc;padding: 20px;margin: 10px;width: 250px;}
+.card img{width: 50px;margin-bottom: 10px;}
+
+/*Tables*/
+table{width: 100%;border-collapse: collapse;background-color: #ffffff;margin-bottom: 10px;}
+caption{font-weight: bold;text-align: left;padding: 5px;}
+th{background-color: #0F3D3E;color: #ffffff;padding: 10px;text-align: left;}
+td{padding: 10px;border: 1px solid#cccccc;}
+.source-note{font-size: 0.8rem;color: #666666;}
+
+/*Lists*/
+.tip-list{list-style: none;padding: 0;}
+.tip-list li{background-color: #ffffff;border-left: 4px solid #F2A93B;padding: 10px;margin-bottom: 8px;}
+
+/*Calculator*/
+#calculator{background-color: #ffffff;border: 1px solid #cccccc;padding:20px;max-width: 500px;}
+#calculator label{display: block;font-weight: bold;margin-bottom: 5px;margin-top: 15px;}
+#calculator input{width: 100%;padding: 8px;border: 1px solid#cccccc;font-size: 1rem;font-family: Arial,sans-serif;}
+#calculator p{font-size:0.8rem;color: color:#666666;}
+#results{color: #0F3D3E;font-weight: bold;margin-top: 10px;}
+
+
+/*iframe*/
+iframe{width:100%;max-width: 560px;height: 315px;border:none;margin-top: 10px;}
+
+/*Footer*/
+footer{background-color: #0F3D3E;color: #ffffff;text-align: center;padding: 20px;margin-top: 20px;}
+
+/*Responsive Media query*/
+@media(max-width: 768px){
+	header{flex-direction: column;align-items: flex-start;}
+	nav li{margin-left: 0;margin-right: 10px;}
+	.card{width: 100%}
+	#calculator{width: 100%}
+}

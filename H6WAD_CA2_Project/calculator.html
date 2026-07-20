@@ -1,0 +1,98 @@
+<!--Student Name:Catherine Wanjiru
+Page:Energy Calculator
+Project:Smart Home Sustainability-water and Energy -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>Energy Calculator|smart Home Sustainability</title>
+    <link rel="stylesheet"href="styles.css">
+</head>
+<body>
+    <!--Navigation Menu and header-->
+  <header>
+        <a href="index.html">SmartHome Sustain</a>
+    <nav>
+     <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="energy.html">Energy</a></li>
+        <li><a href="calculator.html">Calculator</a>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="water.html">Water</a></li>
+        <li><a href="contact.html">Contact</a></li>
+     </ul>
+    </nav>
+  </header>
+  <section id="hero-calc">
+    <h1>Smart Home Energy Savings calculator</h1>
+    <p>Enter your details below to estimate how much you could save each year by switching to LED bulbsand smart heating controls.</p>
+  </section>
+    <!--Main content-->
+  <section class="section-card">
+    <h2>How the Calculator Works</h2>
+    <p>This calculator estimates two types of annual savings based on SEI and ENERGY STAR figures:</p>
+    <ul class="tip-list">
+        <li>LED lighting saving:based on replacing 60W bulbs with 9W LED equivalents and your daily hours of use.</li>
+        <li>Smart heating saving:based on a 10% reduction on your annual heating bill,in line with SEAI guidance.</li>
+    </ul>
+    <table>
+        <caption>Calculator Assumptions</caption>
+        <thead>
+            <tr>
+                <th>Input</th>
+                <th>Assumption Used</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Old bulb wattage</td><td>60W incandescent</td><td>ENERGY STAR</td></tr>
+            <tr><td>LED bulb wattage</td><td>9W LED equivalent</td><td>ENERGY STAR</td></tr>
+            <tr><td>Heating saving rate</td><td>10% of annual heating bill</td><td>SEAI</td></tr>
+            <tr><td>Default electricity price</td><td>&euro;0.42 per kwh</td><td>Average Irish unit rate</td></tr>
+        </tbody>
+    </table>
+    <p class="source-note">Sources:ENERGY STAR(energystar.gov);SEAI,save Energy at home(seai.ie).</p>
+    <img src="images/icon-bulb.svg">alt="Light bulb icon representing LED energy savings">
+  </section>
+  <section>
+      <h2>Watch :Smart Home Energy Saving Tips</h2>
+      <p>This video explains how smart home technology helps reduce energy use in Irish households.</p>
+      <iframe>
+        width="560"
+        height="315"
+        src="https://www.youtube .com/embed/Your_Video ID"
+        title="Smart home energy saving tips video"
+        allowfullscreen>
+    </iframe>
+  </section>
+
+  <section>
+    <div id="calculator">
+        <h2>Your Numbers</h2>
+        <label for="bulb-count">Number of old bulbs to replace with LED</label>
+        <input type="number"id="bulb-count"min="0"step="1"placeholder="e.g.10">
+
+        <label for="bulb-hours">Average hours those bulbs are on per day</label>
+        <input type="number"id="bulb-hours"min="24"step="0.5"placeholder="e.g.4">
+        <p>Must be between 0 and 24.</p>
+
+        <label for="unit-price">Electricity price(&euro;per kwh)</label>
+        <input type="number"id="unit-price"min="0"step="0.01"value="0.42">
+       
+        <label for="heating-bill">Monthly heating bill(&euro;)</label>
+        <input type="number"id="heating-bill"min="0"step="1"placeholder="e.g.90">
+
+        <button type="button"class="btn"onclick="calculateSavings()">Calculate My Savings</button>
+
+        <p id="results"></p>
+    </div>
+  </section>
+  <footer>
+      <p>Smart Home Sustainability Project-H6WD.Web Design and Development,National college of Ireland,2026.</p>
+      <p>Ctreated by Catherine Wanjiru-Supporting SDG 6(Clean water)and SDG 7(Affordable Clean Energy)</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
