@@ -1,236 +1,409 @@
-/*H6WD ca2 smart Home sustainability-stye.css*/
+/* =============================================================
+   H6WD CA2 — Smart Home Sustainability (Water & Energy, SDG 6 & 7)
+   Shared Stylesheet — styles.css
+   Written by: Catherine Wanjiru
+   Covers: Home, Energy Efficiency, Energy Calculator pages
 
-body{
-	font-family:Arial,sans-serif;
-	margin: 0; 
-	padding: 0;
-	background-color: #f0f0f0; 
-	color: #333333;
-}
+   Built using topics covered in class: classes, IDs, basic
+   positioning, Flexbox layout, and responsive media queries.
+   ============================================================= */
 
-h1,h2,h3{
-	color: #0F3D3E; 
-		}
-
-a{
-	 color: #1B6B65;
-}
-
-p{
-	 line-height:1.6;
-} 
-a:hover { 
-	text-decoration: underline;
-}
-img{
-	 max-width: 100%;
-	 height:auto; 
-}
-/*Header and Nav*/
-header{
-	background-color: #0F3D3E;
-	padding:15px;
-	display: flex;
-	justify-content: space-between;
-	align-items:center;
-	flex-wrap: wrap;
-}
-header>a {
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 1.2rem;
-}
-nav ul{
-	list-style: none;
-	display: flex;flex-wrap: wrap;margin: 0;padding: 0;
-}
-nav li{
-	margin-left: 15px;
-}
-nav a{
-	color: #ffffff;
-	font-weight: bold;
-}
-nav a.active{color: #F2A93B;
+/* ----- 1. Reset & Base Styles ----- (Catherine) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*Hero*/
-#hero{background-color: #1B6B65;
-	color: #ffffff;
-	padding: 30px 20px;
-}
-#hero h1{color: #ffffff;}
-#hero-energy{background-color: #0F3D3E;
-	color: #ffffff;
-	padding: 20px;
-}
-#hero-energy h1{
-	color:#ffffff;
-}
-#hero-calc{background-color: #0F3D3E;
-	color: #ffffff;
-	padding: 20px;
-}
-#hero-calc h1{
-	color: #ffffff;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F7F5F0;
+  color: #1A1A1A;
+  line-height: 1.6;
 }
 
-/*Buttons*/
-.btn{display: inline-block;
-	background-color: #F2A93B;
-	color: #0F3D3E;font-weight: bold;
-	padding: 10px 20px;
-	border:none;
-	margin-top: 10px;
-	text-decoration: none;
-}
-.btn:hover{background-color: #d9921f;
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: #0F3D3E;
+  line-height: 1.2;
 }
 
-/*Sections*/
-section{padding: 25px 20px;
-	max-width: 1100px;
-	margin: 0 auto;
+a {
+  color: #1B6B65;
+  text-decoration: none;
 }
 
-/*Layout*/
-.section{
-	padding:25px 20px;
-}
-.container{
-	max-width: 100px;
-	margin: 0 auto;
-	padding:0 20px;
-}
-.center-text{
-	text-align:center;
-}
-.space-bottom{
-	margin-bottom:15px;
-}
-.section-intro{
-	margin-bottom: 20px;
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
-/*Cards flexbox*/
-.card-row{
-	display: flex;
-	flex-wrap: wrap;
-}
-.card{
-	background-color: #ffffff;
-	border: 1px solid #cccccc;
-	padding: 20px;
-	margin: 10px;
-	width: 250px;
-}
-.card img{
-	width: 50px;
-	margin-bottom: 10px;
-}
-.cards{
-	display:grid;
-	grid-template-columns: repeat(3,1fr);
-	gap: 20px; 
-	max-width: 1100px;
-	margin: 0 auto;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/*Tables*/
-table{
-	width: 100%;border-collapse: collapse;
-	background-color: #ffffff;
-	margin-bottom: 10px;
-}
-caption{font-weight: bold;
-	text-align: left;
-	padding: 5px;
-}
-th{
-	background-color: #0F3D3E;
-	color: #ffffff;
-	padding: 10px;
-	text-align: left;
-}
-td{padding: 10px;
-	border: 1px solid#cccccc;
-}
-.source-note{
-	font-size: 0.8rem;
-	color: #666666;
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/*Lists*/
-.tip-list{
-	list-style: none;
-	padding: 0;
-}
-.tip-list li{
-	background-color: #ffffff;
-	border-left: 4px solid #F2A93B;
-	padding: 10px;
-	margin-bottom: 8px;
+/* ----- 2. Header & Navigation (Flexbox) ----- (Catherine) */
+.site-header {
+  background-color: #0F3D3E;
+  padding: 16px 0;
 }
 
-/*Calculator*/
-#calculator{
-	background-color: #ffffff;
-	border: 1px solid #cccccc;
-	padding:20px;
-	max-width: 500px;}
-#calculator label{
-	display: block;
-	font-weight: bold;
-	margin-bottom: 5px;
-	margin-top: 15px;
-}
-#calculator input{
-	width: 100%;
-	padding: 8px;
-	border: 1px solid#cccccc;
-	font-size: 1rem;
-	font-family: Arial,sans-serif;
-}
-#calculator p{
-	font-size:0.8rem;
-	color:#666666;
-}
-#results{
-	color: #0F3D3E;
-	font-weight: bold;
-	margin-top: 15px;
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-
-/*iframe*/
-iframe{
-	width:100%;
-	max-width: 560px;
-	height: 315px;
-	border:none;
-	margin-top: 10px;
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #FFFFFF;
 }
 
-/*Footer*/
-footer{
-	background-color: #0F3D3E;
-	color: #ffffff;text-align: center;padding: 20px;margin-top: 20px;
+.logo span {
+  color: #F2A93B;
 }
 
-/*Responsive Media query*/
-@media(max-width: 768px){
-	header{
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	nav li{
-		margin-left: 0;
-		margin-right: 10px;
-	}
-	.card{
-		width: 100%
-	}
-	#calculator{
-		width: 100%
-	}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
 }
+
+.main-nav li {
+  margin-left: 22px;
+}
+
+.main-nav a {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.main-nav a.active {
+  color: #F2A93B;
+  border-bottom: 2px solid #F2A93B;
+}
+
+/* ----- 3. Buttons ----- (Catherine) */
+.btn {
+  display: inline-block;
+  background-color: #F2A93B;
+  color: #0F3D3E;
+  font-weight: bold;
+  padding: 12px 26px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #d9921f;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: #FFFFFF;
+  color: #0F3D3E;
+}
+
+/* ----- 4. Hero Section (Flexbox two-column layout) ----- (Catherine) */
+.hero {
+  background-color: #F7F5F0;
+  padding: 60px 0;
+}
+
+.hero-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-flex > div,
+.hero-flex > img {
+  flex: 1 1 400px;
+  margin: 10px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+}
+
+.hero-actions a {
+  margin-right: 14px;
+  margin-bottom: 10px;
+}
+
+.hero-actions .btn-secondary {
+  color: #0F3D3E;
+  border-color: #0F3D3E;
+}
+
+.hero-actions .btn-secondary:hover {
+  background-color: #0F3D3E;
+  color: #FFFFFF;
+}
+
+/* ----- 5. Section Spacing ----- (Catherine) */
+.section {
+  padding: 50px 0;
+}
+
+.section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+/* ----- 6. Card Row (Flexbox) ----- (Catherine) */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  padding: 28px;
+  flex: 1 1 280px;
+  margin: 12px;
+}
+
+.card img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card a {
+  font-weight: bold;
+}
+
+/* ----- 7. Data Tables ----- (Catherine) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #0F3D3E;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border: 1px solid #e3e0d8;
+}
+
+th {
+  background-color: #0F3D3E;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.source-note {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ----- 8. Tip Lists ----- (Catherine) */
+.tip-list {
+  list-style: none;
+}
+
+.tip-list li {
+  background-color: #FFFFFF;
+  border-left: 4px solid #F2A93B;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+}
+
+/* ----- 9. Calculator Form (Flexbox) ----- (Catherine) */
+.calculator-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calc-form,
+.meter-panel {
+  flex: 1 1 400px;
+  margin: 10px;
+}
+
+.calc-form {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.form-group input:focus {
+  outline: 2px solid #1B6B65;
+  border-color: #1B6B65;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.error-message {
+  background-color: #fdecea;
+  color: #b3261e;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+}
+
+/* ----- 10. Results Panel ----- (Catherine) */
+.meter-panel {
+  background-color: #0F3D3E;
+  color: #FFFFFF;
+  padding: 30px;
+  display: none;
+}
+
+.meter-panel.show {
+  display: block;
+}
+
+.meter-panel h3 {
+  color: #F2A93B;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.meter-readout {
+  background-color: #0a2c2d;
+  border: 2px solid #F2A93B;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.meter-readout .value {
+  font-size: 1.8rem;
+  color: #F2A93B;
+  display: block;
+}
+
+.meter-readout .label {
+  font-size: 0.8rem;
+  color: #cfe8e6;
+}
+
+.meter-disclaimer {
+  font-size: 0.78rem;
+  color: #cfe8e6;
+  margin-top: 16px;
+}
+
+/* ----- 11. Footer ----- (Catherine) */
+.site-footer {
+  background-color: #0F3D3E;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  margin-bottom: 4px;
+}
+
+.hero-small {
+  padding: 40px 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.space-bottom {
+  margin-bottom: 20px;
+}
+
+/* ----- 12. Responsive Media Queries ----- (Catherine) */
+@media (max-width: 768px) {
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav li {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
