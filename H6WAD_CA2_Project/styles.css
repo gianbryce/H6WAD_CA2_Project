@@ -56,8 +56,8 @@ td{padding: 10px;border: 1px solid#cccccc;}
 #calculator{background-color: #ffffff;border: 1px solid #cccccc;padding:20px;max-width: 500px;}
 #calculator label{display: block;font-weight: bold;margin-bottom: 5px;margin-top: 15px;}
 #calculator input{width: 100%;padding: 8px;border: 1px solid#cccccc;font-size: 1rem;font-family: Arial,sans-serif;}
-#calculator p{font-size:0.8rem;color: color:#666666;}
-#results{color: #0F3D3E;font-weight: bold;margin-top: 10px;}
+#calculator p{font-size:0.8rem;color:#666666;}
+#results{color: #0F3D3E;font-weight: bold;margin-top: 15px;}
 
 
 /*iframe*/
