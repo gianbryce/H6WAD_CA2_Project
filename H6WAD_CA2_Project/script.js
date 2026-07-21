@@ -25,23 +25,23 @@ function calculateSavings(){
 		document.getElementById("results").innerHTML="Please enter a valid number of bulbs.";
 			return;
 	}
-	if(isNan(bulbHours)||bulbHours<0||bulbHours>24){
+	if(isNaN(bulbHours)||bulbHours<0||bulbHours>24){
 		document.getElementById("results").innerHTML="Hours per day must be between 0 and 24.";
 		return;
 	}
-	if(isNan(unitPrice)||unitPrice<0){
+	if(isNaN(unitPrice)||unitPrice<0){
 		document.getElementById("results").innerHTML="Please enter a valid electricity price.";
 		return;
 	}
-	if(isNan(heatingBill)||heatingBill<0){
+	if(isNaN(heatingBill)||heatingBill<0){
 		document.getElementById("results").innerHTML="Please enter a valid monthly heating bill.";
 		return;
 	}
-	//calculate LED lightinging saving
+	//calculate LED lighting saving
 	//60W old bulb replaced by 9W LED(ENERGY STAR)
 	let wattsSaved=60-9;
 	let dailyKwh=(bulbCount*bulbHours*wattsSaved)/1000;
-	let ledSaving=Math.round(dailyKwh*365*unitprice*100)/100;
+	let ledSaving=Math.round(dailyKwh*365*unitPrice*100)/100;
 
 	//Calculate smart heating saving-10% off annual bill
 	let thermostatSaving=Math.round(heatingBill*12*0.10*100)/100;
