@@ -10,7 +10,7 @@ Energy Saving Calculator pages
 function calculateSavings(){
 	//read input values from page
 	let bulbCount =document.getElementById("bulb-count").value;
-	let bulbHours=document.getElementById("bulb-hours").value;
+	let bulbHours=document.getElementById("hours").value;
 	let unitPrice =document.getElementById("unit-price").value;
 	let heatingBill =document.getElementById("heating-bill").value;
 	
@@ -22,19 +22,19 @@ function calculateSavings(){
 
 	//validate the inputs using if statements
 	if(isNaN(bulbCount)||bulbCount<0){
-		document.getElementById("results").innerHTML="Please enter a valid number of bulbs.";
+		document.getElementById("results").innerText="Please enter a valid number of bulbs.";
 			return;
 	}
 	if(isNaN(bulbHours)||bulbHours<0||bulbHours>24){
-		document.getElementById("results").innerHTML="Hours per day must be between 0 and 24.";
+		document.getElementById("results").innerText="Hours per day must be between 0 and 24.";
 		return;
 	}
 	if(isNaN(unitPrice)||unitPrice<0){
-		document.getElementById("results").innerHTML="Please enter a valid electricity price.";
+		document.getElementById("results").innerText="Please enter a valid electricity price.";
 		return;
 	}
 	if(isNaN(heatingBill)||heatingBill<0){
-		document.getElementById("results").innerHTML="Please enter a valid monthly heating bill.";
+		document.getElementById("results").innerText="Please enter a valid monthly heating bill.";
 		return;
 	}
 	//calculate LED lighting saving
@@ -52,8 +52,14 @@ function calculateSavings(){
 	//Write results back to the page
 
 	document.getElementById("results").innerHTML=
-	"LED Lighting Saving:€"+ledSaving+"<br>"+
-	"Smart Heating Saving:€"+thermostatSaving+"<br>"+
-	"Total Annual Saving:€"+totalSaving;
-
+	"<strong>LED Lighting Saving:</strong> &euro;"+ledSaving.toFixed(2)+"<br>"+
+	"<strong>Smart Heating Saving:</strong>&euro;"+thermostatSaving.toFixed(2)+"<br>"+
+	"<strong>Total Annual Saving:</strong> &euro;"+totalSaving.toFixed(2);
+}
+//Reset the form and clear results
+function resetResults(){
+	document.getElementById("results").innerHTML=
+	"LED lighting Saving: &euro;0.00<br>"+
+	"Smart Heating Saving: &euro;0.00<br>"+
+	"Total Annual Saving: &euro;0.00";
 }
