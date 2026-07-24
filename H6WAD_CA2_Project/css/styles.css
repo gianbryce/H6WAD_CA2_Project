@@ -1,4 +1,128 @@
-nav ul {
+body {
+    margin: 0;
+    font-family: "Poppins";
+}
+
+main {
+    padding: 0;
+}
+
+.banner {
+    width: 100%;
+    min-height: 500px;
+    padding: 20px 20px 20px 50px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+            url("../images/waterwell.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    min-width: 175px;
+    padding: 16px 28px;
+    border-radius: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+
+    background-color: darkorange;
+    color: white;
+}
+.banner p {
+    font-size: 20px;
+}
+.row {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 25px;
+
+    background-color: seagreen;
+}
+
+.navbar-logo {
+    /* Places the elements in a row and centers them */
+    display: flex;
+    align-items: center;
+}
+
+/* Removes pre-defined styling for the navbar contents
+   and applies own colouring */
+.navbar ul {
+    list-style-type: none;
+    background-color: seagreen;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #1f5d3b;
+}
+
+.navbar li {
+    float: left;
+}
+
+.content {
+    display: flex;
+}
+
+.row1 {
+    background-color: lightgrey;
+    margin: 0px;
+}
+
+.row1 h2 {
+    margin: 0;
+    padding: 20px;
+}
+.row1 img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*nav ul {
     display: flex;
 }
 nav li {
@@ -17,7 +141,7 @@ nav li a {
 nav li a.active {
     color: yellow;
 }
-
+*/
 .column {
     float: left;
     width: 25%;
