@@ -34,19 +34,28 @@ nav a:hover{
 }
 main{
 	min-height: 400px;
+	background-image: url('images/background3.jpeg'); background-size: cover;
+	
 }
 section{
-	margin-top: 30px;
-	margin-bottom: 30px;
-	margin:50px 0;
 }
 .hero{
 	background-color: #DFF3E8;
-	padding: 40px 20px;
 	text-align: center;
+	padding: 50px 20px;
+}
+.hero p{
+	max-width: 600px;
+	margin: 0 auto 25px auto;
 }
 .hero h2{
 	color:#0B6E4F;
+	margin-bottom: 15px;
+}
+.hero-text{
+	max-width: 900px;
+	margin: 0 auto 30px auto;
+	font-size: 1.2rem;
 }
 .hero.btn{
 	margin:10px 5px;
@@ -58,6 +67,12 @@ img{
 	width: 100%;
 	height: auto;
 	border-radius: 8px;
+}
+.button-group{
+	display:flex;
+	gap:15px;
+	justify-content:center;
+	flex-wrap:wrap;
 }
 .info-box{
 	background-color: #ffffff;

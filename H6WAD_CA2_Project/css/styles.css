@@ -29,3 +29,8 @@ nav li a.active {
     clear: both;
     display: table;
 }
+.mybackground {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+  
+}
