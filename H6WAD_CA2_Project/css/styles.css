@@ -1,36 +1,519 @@
-nav ul {
+/* Utility classes to prevent repeating lines
+
+flex-row:
+Applies a flex layout to place the contents in a horizontal line. */
+.flex-row {
     display: flex;
-}
-nav li {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    width: 150px;
-    background-color: darkgreen;
-    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-nav li a {
+/*
+flex-col:
+Applies a flex layout to place the contents in a vertical line. */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* All other selectors */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    padding: 0;
+}
+
+/*---- Large screens ----*/
+
+/* Navbar properties*/
+.navbar {
+    padding: 0 24px;
+
+    background-color: #2baf2b;
+}
+
+/* Navbar button containers*/
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    background-color: #2baf2b;
+}
+
+/* Navbar elements */
+
+.navbar img {
+    max-height: 150px;
+    width: auto;
+}
+
+.navbar .logo-text {
+    font-family: cursive;
+    font-size: clamp(10px, 5vw, 25px);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 15px;
+
+    font-size: clamp(10px, 5vw, 25px);
+
+    background-color: deepskyblue;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 0 0 #006b98;
+}
+
+.navbar a {
+    padding: 10px;
+    font-size: clamp(10px, 5vw, 20px);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+ul li.navbar-button {
+    padding: 10px;
+    font-size: clamp(10px, 5vw, 20px);
+    text-align: center;
+    text-decoration: none;
+    background-color: darkorange;
+    box-shadow: 0 4px 0 0 #bf6b01;
+}
+
+.navbar li:hover {
+    background-color: #0194cc;
+    border-radius: 15px;
+}
+
+.banner-content .button:hover,
+.navbar li.navbar-button:hover {
+    background-color: #d27500;
+}
+
+.row1 {
+    width: 100%;
+    min-width: 0;
+    gap: clamp(10px, 2vw, 30px);
+    padding: 50px 0;
+    background-color: white;
+}
+
+.row1 img {
+    width: 100%;
+    min-width: 0;
+    max-width: 500px;
+    height: auto;
+    flex: 1 1 400px;
+}
+
+.row1-content {
+    flex: 1 1 400px;
+    min-width: 0;
+}
+
+.row1-content h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.row1-content p {
+    font-size: clamp(15px, 3vw, 30px);
+}
+
+.button {
+    min-width: 100px;
+    max-width: 200px;
+    padding: 10px 20px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(15px, 2vw, 25px);
+    font-weight: 400;
+
+    background-color: darkorange;
+    color: white;
+    box-shadow: 0 4px 0 0 #bf6b01;
+    border-radius: 15px;
+}
+
+/* Image article */
+.media-article {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    padding: 15px clamp(15px, 5vw, 200px);
+    gap: clamp(15px, 5vw, 30px);
+}
+
+.media-article-image {
+    width: 100%;
+    min-width: 0;
+    max-width: 400px;
+}
+
+.media-article-content h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.media-article-content p {
+    font-size: clamp(8px, 3vw, 15px);
+}
+.media-article-image img {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+/* Homepage banner section */
+.banner {
+    padding: 25px;
+    width: 100%;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+
+    background-image:
+            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+            url("../images/waterwell.jpg");
+}
+
+.banner-content {
+    width: 100%;
+    max-width: 1000px;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: clamp(25px, 5vw, 50px);
+}
+
+.banner-content p {
+    font-size: clamp(15px, 5vw, 30px);
+}
+
+/* Quick reads section */
+
+.quick-reads {
+    background-color: #d3d3d3;
+}
+.quick-reads-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.col-element {
+    display: flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+    gap: 25px;
+    min-height: 300px;
+
+    padding: 25px;
+
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.col-header {
+    min-height: 150px;
+    width: 100%;
+    gap: 50px;
+}
+
+.col-header h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.col-header a {
+    text-decoration: underline;
+    color: black;
+    font-size: clamp(15px, 5vw, 30px);
+    font-weight: 300;
+}
+
+.col-element-text a {
+    text-decoration: none;
+    font-size: clamp(10px, 5vw, 25px);
+    font-weight: 400;
     color: black;
 }
-
-nav li a.active {
-    color: yellow;
+.col-element img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
 }
 
-.column {
-    float: left;
-    width: 25%;
-    padding: 5px;
-}
+/* Water page banner section */
+.waterpage-banner {
+    width: 100%;
+    min-height: 600px;
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-.mybackground {
-    background-image: url('images/background.jpg');
+    background-image:
+            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+            url("../images/waterhose.jpg");
     background-size: cover;
-  
+    background-position: center;
+}
+
+.waterpage-banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    color: white;
+}
+
+.waterpage-banner-content h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.waterpage-banner-content p {
+    font-size: clamp(30px, 5vw, 30px);
+}
+
+/* About Us Section */
+.about {
+    min-height: 300px;
+
+    gap: 50px;
+
+
+    background-color: white;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.line-decoration {
+    max-height: 20px;
+    gap: 0;
+}
+
+.about-content {
+    padding: 15px;
+}
+
+.about-content h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.about-content p {
+    font-size: clamp(30px, 5vw, 30px);
+}
+
+.about-button {
+    border-radius: 15px;
+    max-width: 200px;
+    padding: 15px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(10px, 5vw, 25px);
+    font-weight: 400;
+
+    background-color: darkorange;
+    color: white;
+    box-shadow: 0 4px 0 0 #bf6b01;
+}
+
+/* Footer section */
+footer {
+    gap: 10px;
+
+    background-color: #2baf2b;
+    color: white;
+}
+
+footer img {
+    max-height: 150px;
+    width: auto;
+}
+
+.description {
+    max-width: 500px;
+    height: auto;
+}
+.socials ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+
+    gap: 20px;
+    list-style-type: none;
+    color: white;
+}
+
+.socials ul li {
+    width: 150px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.socials ul li a {
+    font-size: clamp(10px, 5vw, 15px);
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    gap: 15px;
+}
+/* Smaller screen sizes*/
+@media (max-width: 890px) {
+    .about,
+    .quick-reads-content,
+    .col-element,
+    footer.flex-row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 90px;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .row1 {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .row1 img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 15px;
+    }
+
+    .row1-content {
+        width: 100%;
+    }
+
+    .socials ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.media-article {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    width: min(1000px, 100%);
+    grid-template-columns: 300px 1fr;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.media-article h2 {
+    font-size: clamp(15px, 5vw, 30px);
+}
+
+.media-article p {
+    font-size: clamp(8px, 2vw, 18px);
+}
+.media-article-image img {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.media-article-image iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border-radius: 25px;
+}
+
+.energy-banner-content {
+    padding: 25px;
+    width: 100%;
+    min-height: 400px;
+
+    background-image:
+            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+            url("../images/solarpanels.jpg");
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.energy-banner {
+    background-image:
+            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+            url("../images/solarpanels.jpg");
 }
