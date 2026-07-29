@@ -27,20 +27,38 @@ nav a{
 nav a:hover{
 	 color: #e9cf3e;
 }
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
 main{
 	min-height: 400px;
+	background-image: url('images/background3.jpeg'); background-size: cover;
+	
 }
 section{
-	margin-top: 30px;
-	margin-bottom: 30px;
 }
 .hero{
 	background-color: #DFF3E8;
-	padding: 40px 20px;
 	text-align: center;
+	padding: 50px 20px;
+}
+.hero p{
+	max-width: 600px;
+	margin: 0 auto 25px auto;
 }
 .hero h2{
 	color:#0B6E4F;
+	margin-bottom: 15px;
+}
+.hero-text{
+	max-width: 900px;
+	margin: 0 auto 30px auto;
+	font-size: 1.2rem;
+}
+.hero.btn{
+	margin:10px 5px;
 }
 h2,h3{
 	color: #0B6E4F;
@@ -50,12 +68,20 @@ img{
 	height: auto;
 	border-radius: 8px;
 }
+.button-group{
+	display:flex;
+	gap:15px;
+	justify-content:center;
+	flex-wrap:wrap;
+}
 .info-box{
 	background-color: #ffffff;
-	padding: 20px;
+	padding: 25px;
 	border-left: 5px solid #0B6E4F;
-	margin-bottom: 20px;
+	border-radius: 8px;
+	height: 100%;
 }
+
 form{
 	background-color: #f5f7f5;
 	padding: 20px;
@@ -71,8 +97,17 @@ form{
 	margin-top: 20px;
 	font-weight: bold;
 }
+.energy-card{
+	background:#ffffff;
+	padding: 25px;
+	border-radius: 10px;
+	text-align: center;
+	height: 100%;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 .energy-card img{
 	width:80px
+	margin-bottom: 15px;
 
 }
 .error{
@@ -88,7 +123,7 @@ footer{
 	color: #ffffff;
 	text-align: center;
 	padding: 15px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 @media screen and (max-width: 768px){
 	header{

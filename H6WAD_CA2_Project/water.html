@@ -9,89 +9,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Retrieve device dimensions for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <!-- Navigation Bar -->
 <header class="row-navigation">
-    <nav class="navbar">
+    <nav class="navbar flex-row">
+        <img src="images/logo.png" alt="Website logo">
+
         <ul>
-            <li> <img class="navbar-logo" src="images/smarthome.png" height="50px" alt="SmartHome logo"></li>
-            <li><strong><a href="index.html">Home</a></strong></li>
-            <li><strong><a href="water.html" class="active">Water Conservation</a></strong></li>
-            <li><strong><a href="sustainability.html">Sustainability</a></strong></li>
-            <li><strong><a href="contact.html">Contact</a></strong></li>
+            <li><a href="index_gian.html">Home</a></li>
+            <li><a href="water.html" class="active">Water Conservation</a></li>
+            <li><a href="energyconservation.html">Energy Conservation</a></li>
+            <li><a href="energycalculator.html">Energy Calculator</a></li>
+            <li class="navbar-button"><a href=contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <!-- Main Content -->
 <main>
-    <!-- Banner section -->
-    <section class="banner">
-        <div class="banner-content">
+    <section class="waterpage-banner flex-col">
+
+        <!-- Banner side content -->
+        <div class="waterpage-banner-content">
             <h1>Why Water Conservation Matters</h1>
-            <p>Water is one of our most valuable resources. Every drop we save helps protect the environment, reduce utility costs, and ensure clean water is available for future generations. Water conservation is not just about using less water—it is about using water wisely.</p>
-        </div>
-
-        <div class="banner-buttons">
-            <a href class="button">Learn More</a>
+            <p>Saving water is important because clean water is a limited resource that people, animals, and plants all depend on. By using water carefully, we can reduce waste, protect the environment, and help make sure there is enough water for future generations.</p>
         </div>
     </section>
 
-    <!-- First Row -->
-    <section class="row1">
-        <h2>Why Water Conservation Matters</h2>
-        <div class="content">
-            <img src="images/watertap.jpg" alt="Dripping tap outdoors">
-            <p>Water is one of our most valuable resources. Every drop we save helps protect the environment, reduce utility costs, and ensure clean water is available for future generations. Water conservation is not just about using less water—it is about using water wisely.</p>
+    <section class="media-article">
+        <div class="media-article-image">
+            <img src="images/watertap.jpg">
+        </div>
+        <div class="item">
+            <h2>How to save water at home</h2>
+            <p>Saving water starts with small changes. Turn off the tap while brushing your teeth and take shorter showers.</p>
+            <p>Fix leaking taps, pipes, and toilets as soon as possible. Even a small leak can waste a lot of water.</p>
+            <p>Only use washing machines and dishwashers when they are full. This reduces the number of cycles needed.</p>
+            <p>These simple habits help protect the environment and save clean water for the future.</p>
 
         </div>
     </section>
-
-    <section class="row2"></section>
 </main>
-<hr>
-<div class="row">
-    <div class="column">
-        <img src="images/watertap.jpg" alt="Dripping tap outdoors" width="250" height="250">
-    </div>
-    <div class="column">
-        <p>Water is one of our most valuable resources. Every drop we save helps protect the environment, reduce utility costs, and ensure clean water is available for future generations. Water conservation is not just about using less water—it is about using water wisely.</p>
-    </div>
-</div>
-<h2>Why Water Conservation Matters</h2>
-<hr>
-<div class="row">
-    <div class="column">
-        <img src="images/waterfountain.jpg" alt="Water bottles being filled from a water fountain" width="250" height="250">
-    </div>
-    <div class="column">
-        <p>Fresh water is limited, and demand continues to grow as populations increase, cities expand, and climate patterns change. Conserving water helps reduce pressure on rivers, lakes, reservoirs, and groundwater supplies. It also lowers the energy needed to treat, pump, and heat water.</p>
-        <p>By saving water, communities can:</p>
+
+<!-- Footer section -->
+<footer class="flex-row">
+    <img src="images/logo.png">
+    <div class="description">Sustainable Living is an organisation whose goal is to protect the earth by promoting sustainable living.</div>
+    <div class="socials">
         <ul>
-            <li>Protect natural ecosystems</li>
-            <li>Reduce household and business expenses</li>
-            <li>Improve drought resilience</li>
-            <li>Lower energy use and carbon emissions</li>
-            <li>Support agriculture and food security</li>
-            <li>Preserve water supplies for future generations</li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
         </ul>
     </div>
-</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/otrpxtAmDAk?si=12adUYUePOR0faZS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h2>Water Saving Methods</h2>
-<hr>
-<div class="row">
-    <div class="column">
-        <p>Making small changes in daily habits can make a big difference. Here are some practical ways you can conserve water at home:</p>
-        <h3>Indoor Conservation Methods</h3>
-        <ul>
-            <li>Turning off the tap while brushing your teeth or shaving</li>
-            <li>Taking shorter showers</li>
-            <li>Running the dishwasher only when it is full</li>
-        </ul>
-    </div>
-</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nTcFXJT0Fsc?si=OlFi5pP9awpF4RIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</footer>
 </body>
 </html>
