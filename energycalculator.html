@@ -15,6 +15,8 @@
 </head>
 
 <body>
+<!-- Linking JavaScript File to HTML -->
+<script src="calculator.js" defer></script>
 
 <!-- Navigation Bar -->
 <header class="row-navigation">
@@ -26,14 +28,35 @@
             <li><a href="water.html" class="active">Water Conservation</a></li>
             <li><a href="energyconservation.html">Energy Conservation</a></li>
             <li><a href="energycalculator.html">Energy Calculator</a></li>
-            <li class="navbar-button"><a href=contact.html">Contact</a></li>
+            <li class="navbar-button"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
+<div class="calculator">
+    <div class="calculator-contents flex-col">
+        <h1>Energy calculator</h1>
+        <p>Calculate how much energy your households items are using and the cost to run them.</p>
+
+        <div class="calculator-container">
+            <label for="wattage">Appliance wattage:</label>
+            <input type="number" placeholder="0 watts" id="wattage">
+
+            <label for="usage">Hours of usage:</label>
+            <input type="number" placeholder="0 hours" id="usage">
+
+            <label for="pricePerKwh">Price per kilowatt hours:</label>
+            <input type="number" placeholder="€0.00 price per kWh" id="pricePerKwh">
+
+            <button class="calculator-button" onclick="calculateElectricity()">Calculate</button>
+            <p id="results">Results: </p>
+        </div>
+    </div>
+</div>
+
 <!-- Footer section -->
 <footer class="flex-row">
-    <img src="images/logo.png">
+    <img src="images/logo.png" alt="Website logo">
     <div class="description">Sustainable Living is an organisation whose goal is to protect the earth by promoting sustainable living.</div>
     <div class="socials">
         <ul>

@@ -517,3 +517,59 @@ footer img {
             linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
             url("../images/solarpanels.jpg");
 }
+
+/* Calculator Page */
+.calculator-contents {
+
+    /* Lets it take up 80% of the width, then ensures it doesn't go over 800px wide*/
+    width: min(80%,800px);
+
+    /* Let's it decide the margins for the left and right side (centers it) */
+    margin-inline: auto;
+
+    /* Vertical margins */
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.calculator-contents h1 {
+    margin: 0;
+}
+
+.calculator-container {
+    /* Makes the container occupy 80% of the available space with a set maximum of 800px*/
+    width: min(80%, 800px);
+    gap: 10px;
+
+    /* Creates a 2 x 4 grid grid */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    /* Styling */
+    padding: 15px;
+    border-style: solid;
+    border-radius: 15px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25); /* Adds a shadow*/
+}
+
+.calculator-container label,
+.calculator-container p {
+    text-align: right;
+}
+
+.calculator-container p {
+    border-style: solid;
+    border-width: 1px;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+
+    border-radius: 15px;
+}
+.calculator-button {
+    border-radius: 15px;
+}
+
+.calculator-button:hover {
+    background-color: #b4b4b4
+}
