@@ -466,12 +466,23 @@ footer img {
     }
 }
 
+/* Layout template for media with text beside it */
 .media-article {
     display: grid;
+    grid-template-columns: 300px 1fr; /* The left column contains the media which is given a width of
+                                         300px and the right column receives the left over space. */
+
+    /* */
     align-items: start;
     justify-content: center;
-    width: min(1000px, 100%);
-    grid-template-columns: 300px 1fr;
+
+    /* Allows the element to grow up to 1000px wide, but if the screen is smaller,
+       let the width be 100% of the available screen area.
+
+       Prevents it from taking up the entire space on a wider desktop screen. */
+    max-width: 1000px;
+    width: 100%;
+
     padding: 25px;
     margin: 0 auto;
 }
@@ -498,21 +509,9 @@ footer img {
     border-radius: 25px;
 }
 
-.energy-banner-content {
-    padding: 25px;
-    width: 100%;
-    min-height: 400px;
-
-    background-image:
-            linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-            url("../images/solarpanels.jpg");
-    background-size: cover;
-    background-position: center;
-
-    color: white;
-}
-
+/* Energy page banner */
 .energy-banner {
+    /* Banner for the energy page. It is covered by a semi-transparent black gradient for contrast between texts */
     background-image:
             linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
             url("../images/solarpanels.jpg");
@@ -532,6 +531,7 @@ footer img {
     margin-bottom: 2%;
 }
 
+/* Removes the default margin for the h1 tag */
 .calculator-contents h1 {
     margin: 0;
 }
@@ -541,35 +541,40 @@ footer img {
     width: min(80%, 800px);
     gap: 10px;
 
-    /* Creates a 2 x 4 grid grid */
+    /* Creates a 2 x 4 grid */
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr; /* Right column gets double the amount of space than the left column */
+    grid-template-rows: repeat(3, 1fr); /* Repeat the same columns another 3 rows down */
 
-    /* Styling */
+    /* Styling of grid elements*/
     padding: 15px;
     border-style: solid;
     border-radius: 15px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25); /* Adds a shadow*/
 }
 
+/* Aligns text to the right */
 .calculator-container label,
 .calculator-container p {
-    text-align: right;
 }
 
+/* Styling for the container where the results are printed */
 .calculator-container p {
     border-style: solid;
     border-width: 1px;
-    padding-inline: 2rem;
-    padding-block: 1rem;
+    padding: 2% /* Padding that scales with the parent element's size */;
 
+    /* Border for the   */
     border-radius: 15px;
 }
+
+/* Styling for the calculate button */
 .calculator-button {
+    margin: 8%;
     border-radius: 15px;
 }
 
+/* Makes the button change colour when a mouse hovers over it */
 .calculator-button:hover {
     background-color: #b4b4b4
 }
