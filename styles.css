@@ -34,7 +34,7 @@ nav a:hover{
 }
 main{
 	min-height: 400px;
-	background-image: url('images/background3.jpeg'); 
+	background-image: url('images/background4.jpg'); 
 	background-size: cover;
 	
 }
@@ -60,7 +60,7 @@ main{
 	margin:10px 5px;
 }
 h2,h3{
-	color: #0B6E4F;
+	color: #000000;
 }
 img{
 	width: 100%;
@@ -74,7 +74,7 @@ img{
 	flex-wrap:wrap;
 }
 .info-box{
-	background-color: #ffffff;
+	background-color: #000000;
 	padding: 25px;
 	border-left: 5px solid #0B6E4F;
 	border-radius: 8px;
@@ -105,9 +105,12 @@ form{
 	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 .energy-card img{
+<<<<<<< HEAD:styles.css
 	width: 80px;
+=======
+	width:80px;
+>>>>>>> b82936c (changes):H6WAD_CA2_Project/styles.css
 	margin-bottom: 15px;
-
 }
 .error{
 	color: #ff0000;
