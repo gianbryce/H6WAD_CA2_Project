@@ -34,10 +34,9 @@ nav a:hover{
 }
 main{
 	min-height: 400px;
-	background-image: url('images/background3.jpeg'); background-size: cover;
+	background-image: url('images/background3.jpeg'); 
+	background-size: cover;
 	
-}
-section{
 }
 .hero{
 	background-color: #DFF3E8;
