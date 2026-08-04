@@ -348,7 +348,7 @@ footer img {
     gap: 15px;
 }
 /* Smaller screen sizes*/
-@media (max-width: 890px) {
+@media (max-width: 990px) {
     /* Make everything vertically aligned if the screen width becomes narrow*/
     .about,
     .quick-reads-content,
@@ -362,19 +362,26 @@ footer img {
     }
 
     main {
+        /* Make everything vertically stacked */
         display: flex;
         flex-direction: column;
     }
 
     .navbar-collapse {
+        /* Make the navbar collapsable container stretch the full width of the screen */
         width: 100%;
-        flex-grow: 0;
     }
 
-    .navbar-nav {
+    /* Make all the navbar items stretch the full width of the screen*/
+    .navbar-nav,
+    .nav-item,
+    .nav-link,
+    .dropdown-menu,
+    .dropdown-item {
         width: 100%;
-        align-items: stretch;
+        text-align: center;
     }
+
 
     .row1 {
         flex-direction: column;
@@ -396,6 +403,15 @@ footer img {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .hero{
+        padding: 25px 10px;
+    }
+
+    .col-md-4,
+    .col-md-6{
+        margin-bottom: 20px;
     }
 }
 
@@ -533,7 +549,8 @@ footer img {
 .main-content {
     min-height: 400px;
     /* Adds a background image */
-    background-image: url('../images/background4.jpg'); background-size: cover;
+    background-image: url('../images/background4.jpg');
+    background-size: cover;
 
 }
 
@@ -585,22 +602,4 @@ form{
 iframe{
     width:100%;
     border:none;
-}
-@media screen and (max-width: 768px){
-    header{
-        flex-direction: column;
-    }
-    nav a{
-        display:block;
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    .hero{
-        padding: 25px 10px;
-    }
-    .col-md-4,
-    .col-md-6{
-        margin-bottom: 20px;
-    }
 }
