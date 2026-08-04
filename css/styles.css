@@ -1,121 +1,92 @@
-/* Utility classes to prevent repeating lines
-
-flex-row:
-Applies a flex layout to place the contents in a horizontal line. */
-.flex-row {
+/* Utility classes to prevent repeating lines */
+.flex-horizontal {
+    /* Applies a flex layout to place the contents in a horizontal line. */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-/*
-flex-col:
-Applies a flex layout to place the contents in a vertical line. */
-.flex-col {
+.flex-vertical {
+    /* Applies a flex layout to place the contents in a horizontal line.*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* All other selectors */
+/* Applies to all elements*/
 * {
+    /* Use border-box to include padding and border in the element's heigh and width */
     box-sizing: border-box;
 }
 
+/* Remove default spacing and sets default font to Poppins, and backup as sans-serif */
 body {
-    width: 100%;
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
 
+/* Remove default padding */
 main {
     padding: 0;
 }
 
-/*---- Large screens ----*/
-
-/* Navbar properties*/
-.navbar {
-    padding: 0 24px;
-
-    background-color: #2baf2b;
+/* Navbar Properties */
+header {
+    /* Styling */
+    background-color: #259425;
 }
 
-/* Navbar button containers*/
-.navbar ul {
-    display: flex;
-    list-style-type: none;
-    align-content: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-
-    background-color: #2baf2b;
-}
-
-/* Navbar elements */
-
-.navbar img {
-    max-height: 150px;
+/* Sets the logo height to 120px and let it choose its own width to prevent warping of the image */
+.logo {
+    height: 120px;
     width: auto;
 }
 
-.navbar .logo-text {
-    font-family: cursive;
-    font-size: clamp(10px, 5vw, 25px);
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-
-    color: white;
-    border-style: solid;
-    border-radius: 15px;
+/* Remove default padding and centers the */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
-.navbar ul li {
+nav .container {
+    padding: 0;
+}
+
+.navbar-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin: 15px;
-
-    font-size: clamp(10px, 5vw, 25px);
-
-    background-color: deepskyblue;
-    border-radius: 15px;
-
-    box-shadow: 0 4px 0 0 #006b98;
 }
 
-.navbar a {
-    padding: 10px;
-    font-size: clamp(10px, 5vw, 20px);
-    text-align: center;
-    text-decoration: none;
+.navbar-collapse {
+    /* Prevents the navbar-collapse width from growing */
+    flex-grow: 0;
+}
+.navbar ul {
+    /* Spacing for the navbar <li> elements */
+    gap: 15px;
+}
+.navbar .nav-button {
+    background-color: deepskyblue;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 0 #0093c5
+}
+
+.dropdown-menu {
+    background-color: deepskyblue;
+}
+
+.dropdown-item {
     color: white;
 }
-
-ul li.navbar-button {
-    padding: 10px;
-    font-size: clamp(10px, 5vw, 20px);
-    text-align: center;
-    text-decoration: none;
-    background-color: darkorange;
-    box-shadow: 0 4px 0 0 #bf6b01;
+.nav-item {
+    font-size: 1em;
 }
-
-.navbar li:hover {
-    background-color: #0194cc;
-    border-radius: 15px;
-}
-
-.banner-content .button:hover,
-.navbar li.navbar-button:hover {
-    background-color: #d27500;
-}
-
 .row1 {
     width: 100%;
     min-width: 0;
@@ -160,15 +131,8 @@ ul li.navbar-button {
     box-shadow: 0 4px 0 0 #bf6b01;
     border-radius: 15px;
 }
-
-/* Image article */
 .media-article {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-
-    padding: 15px clamp(15px, 5vw, 200px);
-    gap: clamp(15px, 5vw, 30px);
+    gap: 20px;
 }
 
 .media-article-image {
@@ -177,20 +141,12 @@ ul li.navbar-button {
     max-width: 400px;
 }
 
-.media-article-content h1 {
-    padding: 0;
-    margin: 0;
-}
-
-.media-article-content p {
-    font-size: clamp(8px, 3vw, 15px);
-}
 .media-article-image img {
     display: block;
     width: 100%;
     height: 550px;
     object-fit: cover;
-    object-position: center;
+    object-position:center;
     border-radius: 15px;
 }
 /* Homepage banner section */
@@ -221,7 +177,6 @@ ul li.navbar-button {
 }
 
 /* Quick reads section */
-
 .quick-reads {
     background-color: #d3d3d3;
 }
@@ -337,11 +292,6 @@ ul li.navbar-button {
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25);
 }
 
-.line-decoration {
-    max-height: 20px;
-    gap: 0;
-}
-
 .about-content {
     padding: 15px;
 }
@@ -354,26 +304,12 @@ ul li.navbar-button {
     font-size: clamp(30px, 5vw, 30px);
 }
 
-.about-button {
-    border-radius: 15px;
-    max-width: 200px;
-    padding: 15px;
-
-    text-align: center;
-    text-decoration: none;
-    font-size: clamp(10px, 5vw, 25px);
-    font-weight: 400;
-
-    background-color: darkorange;
-    color: white;
-    box-shadow: 0 4px 0 0 #bf6b01;
-}
-
 /* Footer section */
 footer {
     gap: 10px;
+    padding-block: 15px;
 
-    background-color: #2baf2b;
+    background-color: #259425;
     color: white;
 }
 
@@ -384,6 +320,7 @@ footer img {
 
 .description {
     max-width: 500px;
+    width: 100%;
     height: auto;
 }
 .socials ul {
@@ -412,10 +349,11 @@ footer img {
 }
 /* Smaller screen sizes*/
 @media (max-width: 890px) {
+    /* Make everything vertically aligned if the screen width becomes narrow*/
     .about,
     .quick-reads-content,
     .col-element,
-    footer.flex-row {
+    footer.flex-horizontal {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -428,19 +366,14 @@ footer img {
         flex-direction: column;
     }
 
-    .navbar {
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        min-height: 90px;
-        padding: 15px;
+    .navbar-collapse {
+        width: 100%;
+        flex-grow: 0;
     }
 
-    .navbar ul {
-        flex-direction: column;
+    .navbar-nav {
+        width: 100%;
+        align-items: stretch;
     }
 
     .row1 {
@@ -472,19 +405,16 @@ footer img {
     grid-template-columns: 300px 1fr; /* The left column contains the media which is given a width of
                                          300px and the right column receives the left over space. */
 
-    /* */
-    align-items: start;
-    justify-content: center;
-
-    /* Allows the element to grow up to 1000px wide, but if the screen is smaller,
-       let the width be 100% of the available screen area.
-
-       Prevents it from taking up the entire space on a wider desktop screen. */
+/*  Allows the element to occupy 100% of the available screen space
+    up to a maximum of 1000px for large desktop screens. */
     max-width: 1000px;
     width: 100%;
 
     padding: 25px;
     margin: 0 auto;
+
+    align-items: start;
+    justify-content: center;
 }
 
 .media-article h2 {
@@ -550,7 +480,10 @@ footer img {
     padding: 15px;
     border-style: solid;
     border-radius: 15px;
-    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25); /* Adds a shadow*/
+
+    /* Adds a black box with 25% opacity and offset down by 10px
+       to create a shadow effect. */
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Aligns text to the right */
@@ -562,10 +495,9 @@ footer img {
 .calculator-container p {
     border-style: solid;
     border-width: 1px;
-    padding: 2% /* Padding that scales with the parent element's size */;
-
-    /* Border for the   */
     border-radius: 15px;
+
+    padding: 2% /* Padding that scales with the parent element's size */;
 }
 
 /* Styling for the calculate button */
@@ -577,4 +509,96 @@ footer img {
 /* Makes the button change colour when a mouse hovers over it */
 .calculator-button:hover {
     background-color: #b4b4b4
+}
+
+/* Make the title font-size occupy 3% of the viewport width */
+.main-content h1 {
+    font-size: 3vw;
+    color: #0B6E4F;
+}
+
+.main-content p {
+    font-size: 1.2vw;
+}
+/* Catherine Njaru side */
+/*H6WD CA2 smart Home sustainability-style.css*/
+
+.container{
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.main-content {
+    min-height: 400px;
+    background-image: url('../images/background4.jpg'); background-size: cover;
+
+}
+
+.hero{
+    background-color: #DFF3E8;
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero p{
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+.hero h2{
+    color:#0B6E4F;
+    margin-bottom: 15px;
+}
+h2,h3{
+    color: #0B6E4F;
+}
+.button-group{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+form{
+    background-color: #f5f7f5;
+    padding: 20px;
+}
+form{
+    background-color: #f5f7f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+.energy-card{
+    background:#ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.energy-card img{
+    width: 80px;
+    margin-bottom: 15px;
+
+}
+iframe{
+    width:100%;
+    border:none;
+}
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+    nav a{
+        display:block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .hero{
+        padding: 25px 10px;
+    }
+    .col-md-4,
+    .col-md-6{
+        margin-bottom: 20px;
+    }
 }

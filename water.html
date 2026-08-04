@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Water Conservation</title>
+
+    <!-- Link to external CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Link to local CSS file-->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Import the font Poppins by Google -->
@@ -14,24 +19,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<!-- Navigation Bar -->
-<header class="row-navigation">
-    <nav class="navbar flex-row">
-        <img src="images/logo.png" alt="Website logo">
+<!--Website Header and Navigation-->
+<header>
+    <nav>
+        <!-- Navbar Using Bootstrap Classes -->
+        <div class="container">
+            <div class="navbar navbar-expand-lg navbar-dark">
+                <!-- Logo Image -->
+                <a href="index.html" class="navbar-brand">
+                    <img class="logo" src="images/logo.png" alt="Website logo">
+                </a>
 
-        <ul>
-            <li><a href="index_gian.html">Home</a></li>
-            <li><a href="water.html" class="active">Water Conservation</a></li>
-            <li><a href="energyconservation.html">Energy Conservation</a></li>
-            <li><a href="energycalculator.html">Energy Calculator</a></li>
-            <li class="navbar-button"><a href=contact.html">Contact</a></li>
-        </ul>
+                <!-- Burger Menu Button For Small Screens -->
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarLinks"
+                        aria-controls="navbarLinks"
+                        aria-expanded="false"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarLinks">
+                    <ul class="navbar-nav">
+                        <!-- Energy Conservation Dropdown Links -->
+                        <li class="nav-item dropdown">
+                            <a
+                                    class="nav-link nav-button dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                            >
+                                Energy Conservation
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="energyconservation.html">Ways To Save Energy</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="energy.html">Energy Efficiency</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Calculator Dropdown Links -->
+                        <li class="nav-item dropdown">
+                            <a
+                                    class="nav-link nav-button dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                            >
+                                Energy Calculators
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="energycalculator.html">Calculate Energy Usage</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="calculator.html">Calculate Energy Savings</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="water.html">Water Conservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="sustainability.html">Sustainability</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-button" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
 </header>
 
 <!-- Main Content -->
 <main>
-    <section class="waterpage-banner flex-col">
+    <section class="waterpage-banner flex-vertical">
 
         <!-- Banner side content -->
         <div class="waterpage-banner-content">
@@ -42,7 +122,7 @@
 
     <section class="media-article">
         <div class="media-article-image">
-            <img src="images/watertap.jpg">
+            <img src="images/watertap.jpg" alt="Outdoor water tap dripping with water">
         </div>
         <div class="item">
             <h2>How to save water at home</h2>
@@ -56,8 +136,8 @@
 </main>
 
 <!-- Footer section -->
-<footer class="flex-row">
-    <img src="images/logo.png">
+<footer class="flex-horizontal">
+    <img src="images/logo.png" alt="Website logo">
     <div class="description">Sustainable Living is an organisation whose goal is to protect the earth by promoting sustainable living.</div>
     <div class="socials">
         <ul>
@@ -68,5 +148,7 @@
         </ul>
     </div>
 </footer>
+<!-- Link to external JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
