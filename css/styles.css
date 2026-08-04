@@ -524,13 +524,15 @@ footer img {
 /*H6WD CA2 smart Home sustainability-style.css*/
 
 .container{
-
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
+/* Sets the minimum height of the main content*/
 .main-content {
     min-height: 400px;
+    /* Adds a background image */
     background-image: url('../images/background4.jpg'); background-size: cover;
 
 }
